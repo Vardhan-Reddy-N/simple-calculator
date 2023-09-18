@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+      .h1
+{
+    text-align: center;
+    color: blue;
+}
+#div1
+{
+    margin: auto;
+   border: solid;
+   border-left: 300px;
+   border-right: 300px;
+ 
+    
+}
+    </style>
+</head>
+<body>
+    <div id="div1">
+    <h1 id="one" style="text-align: center;"><b>simple calculator</b></h1>
+    <table align="center" >
+        <form>
+        <tr><td><input placeholder="number e.g 1236" id="num1" name="num1"></input></td>
+        <td><input placeholder="number e.g 7895" id="num2" name="num2"></input></td></tr>
+        <tr><td><input id="ans" placeholder="Result"></td>
+        <td><input type="reset" value="Reset"></td></tr>
+    </form>
+    </table>
+        <table align="center">
+        <tr><td><button onclick="add()"style="background-color:blue;">+addition</button></td>
+        <td><button onclick="sub()" style="background-color:blue;">-subtraction</button></td>
+        <td><button onclick="mul()" style="background-color:blue;">xmultiplication</button></td>
+        <td><button onclick="div()"style="background-color:blue;">/division</button></td></tr>
+    </table>
+</div>
+    <script>
+        function add()
+        {
+            var a,b,sum;
+            a=parseInt(document.getElementById("num1").value);
+            b=parseInt(document.getElementById("num2").value);
+            sum=a+b;
+            document.getElementById("ans").value=sum;
+        }
+        function sub()
+        {
+           var a,b,sub;
+           a=parseInt(document.getElementById("num1").value);
+           b=parseInt(document.getElementById("num2").value);
+           sub=a-b;
+           document.getElementById("ans").value=sub;
+        }
+        function mul()
+        {
+           var a,b,pro;
+           a=parseInt(document.getElementById("num1").value);
+           b=parseInt(document.getElementById("num2").value);
+           pro=a*b
+           document.getElementById("ans").value=pro;
+        }
+        function div()
+        {
+           var a,b,di;
+           a=parseInt(document.getElementById("num1").value);
+           b=parseInt(document.getElementById("num2").value);
+           di=a/b;
+           document.getElementById("ans").value=di;
+        }
+    </script>
+</body>
+</html>
